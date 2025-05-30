@@ -27,6 +27,36 @@ const Home = () => {
         ],
     };
 
+    const tips = () => {
+        let t = null;
+
+        if (slicedArr.length) {
+            if (lastVal < min) {
+                t = <div className='redText mt20'>价格新低</div>;
+            }
+
+            if (lastVal > max) {
+                t = <div className='redText mt20'>价格新高</div>;
+            }
+
+        }
+        return t;
+
+    }
+
+    const tips2 = () => {
+        let t = null;
+
+        if (risePercent > 10 && con.price.length > 1) {
+            t = <div className='redText mt20'>最大涨跌幅已达到{risePercent}%</div>;
+        }
+
+        return t;
+
+    }
+
+
+
     const slicedArr = con.price.slice(0, -1);
 
     const min = Math.min(...slicedArr);
@@ -51,24 +81,11 @@ const Home = () => {
             }
 
             {
-                lastVal < min && slicedArr.length
-                    ? <div className='redText mt20'>价格新低</div>
-                    : null
+                tips()
             }
-
             {
-                lastVal > max && slicedArr.length
-                    ? <div className='redText mt20'>价格新高</div>
-                    : null
+                tips2()
             }
-
-            {
-                risePercent > 10 && con.price.length > 1
-                    ? <div className='redText mt20'>最大涨跌幅已达到{risePercent}%</div>
-                    : null
-            }
-
-
 
             <div className='charCon'>
                 <ReactECharts option={option} style={{ height: 550 }} />
