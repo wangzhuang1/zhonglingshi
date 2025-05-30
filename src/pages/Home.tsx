@@ -72,7 +72,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <h1>钟灵石价格走势</h1>
+            <h1>梦幻物品价格走势</h1>
 
             {
                 btnArr.map((val, index) => {
