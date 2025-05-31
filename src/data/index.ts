@@ -64,9 +64,22 @@ const gaoshen = {
     price: [95, 93]
 }
 
+const MHB = {
+    title: '梦幻币',
+    time,
+    price: [231, 230]
+}
+
+const zhanpo = {
+    title: '战魄',
+    time,
+    price: [232, 231]
+}
+
+
 
 const btnArr = [
-    jianbu, xueqi, huichun, ruibu, y63, heibaoshi, xinghuishi, gaolian, gaobi, gaotou, gaoshen
+    jianbu, xueqi, huichun, ruibu, y63, heibaoshi, xinghuishi, gaolian, gaobi, gaotou, gaoshen, MHB, zhanpo
 ]
 
 export default btnArr;

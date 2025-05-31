@@ -75,7 +75,7 @@ const Home = () => {
 
             {
                 btnArr.map((val, index) => {
-                    return <Button type="primary" style={{ marginRight: '20px', marginBottom: '20px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
+                    return <Button type="primary" style={{ marginRight: '20px', marginBottom: '10px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
                 })
             }
 
