@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '../store';
-import { increment } from '../store/slices/counterSlice';
+import type { RootState } from '../../store';
+import { increment } from '../../store/slices/counterSlice';
 import { Button } from 'antd';
 
 const About = () => {

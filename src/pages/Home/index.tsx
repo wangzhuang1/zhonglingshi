@@ -1,10 +1,9 @@
 
 import { Button } from 'antd';
 import ReactECharts from 'echarts-for-react';
-import btnArr from '../json/index'
+import btnArr from '../../data/index'
 import { useState } from 'react';
-
-
+import './index.less';
 
 const Home = () => {
     const [con, setCon] = useState(btnArr[0])
@@ -48,7 +47,7 @@ const Home = () => {
         let t = null;
 
         if (risePercent > 10 && con.price.length > 1) {
-            t = <div className='redText mt20'>最大涨跌幅已达到{risePercent}%</div>;
+            t = <div className='redText mt20'>最大涨跌幅已达到{risePercent.toFixed(2)}%</div>;
         }
 
         return t;
@@ -76,7 +75,7 @@ const Home = () => {
 
             {
                 btnArr.map((val, index) => {
-                    return <Button type="primary" style={{ marginRight: '20px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
+                    return <Button type="primary" style={{ marginRight: '20px', marginBottom: '20px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
                 })
             }
 
