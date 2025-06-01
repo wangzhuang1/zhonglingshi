@@ -1,7 +1,9 @@
 
 import { Button } from 'antd';
+import { Timeline } from 'antd';
 import ReactECharts from 'echarts-for-react';
-import btnArr from '../../data/index'
+import btnArr from '../../data/price'
+import information from '../../data/information'
 import { useState } from 'react';
 import './index.less';
 
@@ -90,6 +92,17 @@ const Home = () => {
 
             <div className='charCon'>
                 <ReactECharts option={option} style={{ height: 550 }} />
+            </div>
+
+            <div className='information'>
+                <h2>相关资讯</h2>
+                <div className='mod'>
+                    <Timeline
+                        items={information.map(item => ({
+                            children: item.time + item.text
+                        }))}
+                    />
+                </div>
             </div>
         </div>
     );
