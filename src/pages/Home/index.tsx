@@ -73,11 +73,13 @@ const Home = () => {
         <div className='home'>
             <h1>梦幻物品价格走势</h1>
 
-            {
-                btnArr.map((val, index) => {
-                    return <Button type="primary" style={{ marginRight: '20px', marginBottom: '10px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
-                })
-            }
+            <div className='btn-mod'>
+                {
+                    btnArr.map((val, index) => {
+                        return <Button type="primary" style={{ marginRight: '15px', marginBottom: '10px' }} onClick={() => setCon(val)} key={index}>{val.title}</Button>
+                    })
+                }
+            </div>
 
             {
                 tips()
