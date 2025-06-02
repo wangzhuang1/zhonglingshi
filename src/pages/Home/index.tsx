@@ -14,7 +14,7 @@ const Home = () => {
         title: {
             text: con.title,
         },
-        tooltip: {},
+        tooltip: { trigger: 'axis' },
         xAxis: {
             data: con.time,
         },
@@ -24,8 +24,16 @@ const Home = () => {
                 name: '价格',
                 type: 'line',
                 data: con.price,
+                markPoint: {
+                    data: [
+                        { type: 'max', name: 'Max' },
+                        { type: 'min', name: 'Min' }
+                    ]
+                }
             },
+
         ],
+
     };
 
     const tips = () => {
