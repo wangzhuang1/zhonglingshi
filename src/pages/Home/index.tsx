@@ -56,7 +56,7 @@ const Home = () => {
     const tips2 = () => {
         let t = null;
 
-        if (risePercent > 10 && con.price.length > 1) {
+        if (risePercent > 15 && con.price.length > 1) {
             t = <div className='redText mt20'>最大涨跌幅已达到{risePercent.toFixed(2)}%</div>;
         }
 
