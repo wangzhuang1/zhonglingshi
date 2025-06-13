@@ -12,7 +12,7 @@ const Home = () => {
 
     const option = {
         title: {
-            text: con.title,
+            text: con.title + '：' + con.price[con.price.length - 1],
         },
         tooltip: { trigger: 'axis' },
         xAxis: {
