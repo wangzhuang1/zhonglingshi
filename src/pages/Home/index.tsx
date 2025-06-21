@@ -7,7 +7,8 @@ import information from '../../data/information'
 import { useState } from 'react';
 import './index.less';
 
-const Home = () => {
+export default function Home() {
+
     const [con, setCon] = useState(btnArr[0])
 
     const option = {
@@ -116,4 +117,3 @@ const Home = () => {
     );
 };
 
-export default Home;

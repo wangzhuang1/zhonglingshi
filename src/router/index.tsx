@@ -3,6 +3,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Test from '../pages/Test';
 import GuPiao from '../pages/GuPiao';
+import PredictOpenPrice from '../pages/PredictOpenPrice';
 
 
 export const router = createBrowserRouter([
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
   {
     path: '/gupiao',
     element: <GuPiao />,
+  },
+  {
+    path: '/PredictOpenPrice',
+    element: <PredictOpenPrice />,
   },
   {
     path: '/test',

@@ -6,7 +6,7 @@ import type { InputChange } from '../../utils/eventTypes';
 
 
 
-const GuPiao = () => {
+export default function GuPiao() {
     const [prie, setPrice] = useState('');
     const [count, setCount] = useState('');
     const [guConut, setGuConut] = useState('100');
@@ -52,4 +52,3 @@ const GuPiao = () => {
     );
 };
 
-export default GuPiao;
